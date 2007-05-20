@@ -1,11 +1,11 @@
 %define module	Module-Refresh
 %define name	perl-%{module}
-%define version 0.12
+%define version 0.13
 %define rel     1
 
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel %{rel}
+Release:	%mkrel 1
 Summary:	Refresh %INC files when the module is updated on disk
 License:	GPL or Artistic
 Group:		Development/Perl
