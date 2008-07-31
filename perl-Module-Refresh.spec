@@ -5,7 +5,7 @@
 
 Name:		%{name}
 Version:	%{version}
-Release:	%mkrel 4
+Release:	%mkrel 5
 Summary:	Refresh %INC files when the module is updated on disk
 License:	GPL or Artistic
 Group:		Development/Perl
