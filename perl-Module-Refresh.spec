@@ -1,21 +1,21 @@
-%define module	Module-Refresh
-%define name	perl-%{module}
-%define version 0.13
-%define rel     1
+%define upstream_name	 Module-Refresh
+%define upstream_version 0.13
 
-Name:		%{name}
-Version:	%{version}
-Release:	%mkrel 5
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Refresh %INC files when the module is updated on disk
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{module}-%{version}.tar.bz2
-Url:		http://search.cpan.org/dist/%{module}
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+
 %if %{mdkversion} < 1010
 BuildRequires:	perl-devel
 %endif
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 This module is a generalization of the functionality provided by
@@ -23,7 +23,7 @@ Apache::StatINC. It's designed to make it easy to do simple iterative
 development when working in a persistent environment.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +44,3 @@ rm -rf %{buildroot}
 %doc Changes
 %{perl_vendorlib}/Module
 %{_mandir}/man3/*
-
