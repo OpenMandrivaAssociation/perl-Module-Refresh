@@ -11,9 +11,7 @@ Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
 
-%if %{mdkversion} < 1010
-BuildRequires:	perl-devel
-%endif
+BuildRequires:	perl(Path::Class)
 BuildArch:	noarch
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
