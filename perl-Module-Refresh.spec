@@ -1,15 +1,15 @@
 %define upstream_name	 Module-Refresh
-%define upstream_version 0.16
+%define upstream_version 0.17
 
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	2
+Version:	%perl_convert_version 0.17
+Release:	1
 
 Summary:	Refresh INC files when the module is updated on disk
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Module/%{upstream_name}-%{upstream_version}.tar.bz2
+Source0:	ftp://ftp.perl.org:21/pub/CPAN/modules/by-module/Module/Module-Refresh-0.17.tar.gz
 
 BuildRequires:	perl-devel
 BuildRequires:	perl(Path::Class)
@@ -88,4 +88,5 @@ make test
 
 * Sat Oct 01 2005 Michael Scherer <misc@mandriva.org> 0.06-1mdk
 - First mandriva package
+
 
