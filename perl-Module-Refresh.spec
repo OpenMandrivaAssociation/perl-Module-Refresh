@@ -3,7 +3,7 @@
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version 0.17
-Release:	1
+Release:	2
 
 Summary:	Refresh INC files when the module is updated on disk
 License:	GPL+ or Artistic
